@@ -2,10 +2,6 @@ import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer';
 
-
-
-
-
 export const metadata = {
   title: {
     default: 'Lerosaid Logistics | Reliable Delivery in Warri, Delta State',
@@ -23,7 +19,7 @@ export const metadata = {
     siteName: 'Lerosaid Logistics',
     images: [
       {
-        url: 'https://boltzmann.s3.us-east-1.amazonaws.com/Abstract/lerosaid-favicon.png', // change to your OG image path
+        url: 'https://boltzmann.s3.us-east-1.amazonaws.com/Abstract/lerosaid-favicon.png',
         width: 1200,
         height: 630,
         alt: 'Lerosaid Logistics',
@@ -77,8 +73,7 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="bg-gradient-to-b from-black to-gray-900 font-poppins"
->
+      <body className="font-poppins min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           {children}
@@ -88,4 +83,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

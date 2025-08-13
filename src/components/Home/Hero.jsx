@@ -24,15 +24,15 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-[90vh] sm:h-screen min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black mt-0">
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black">
       {/* Subtle Background Overlay */}
       <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-5 bg-cover bg-center" />
 
       {/* Content Container */}
-      <div className="pt-56 relative z-20 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto">
-        <div className="w-full text-center space-y-4 sm:space-y-6 md:space-y-8">
+      <div className="relative z-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto pt-20 pb-10">
+        <div className="w-full text-center space-y-6 sm:space-y-8">
           {/* Company Badge */}
-          <div className="inline-flex items-center gap-2 px-4 pt-2 mt-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <Star className="h-4 w-4 text-yellow-400 fill-current" />
             <span className="text-sm font-medium text-gray-100">Trusted Across Delta State</span>
           </div>
@@ -74,30 +74,36 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="pt-8 sm:pt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="pt-12 sm:pt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-red-500" />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 border border-red-500/30">
+                <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-red-400" />
               </div>
-              <h3 className="text-lg sm:text-2xl font-bold text-white">99.8%</h3>
-              <p className="text-gray-400 text-xs sm:text-base">On-Time Delivery in Delta</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">99.8%</h3>
+              <p className="text-gray-400 text-sm sm:text-base font-medium">On-Time Delivery in Delta</p>
             </div>
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-red-500" />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 border border-red-500/30">
+                <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-red-400" />
               </div>
-              <h3 className="text-lg sm:text-2xl font-bold text-white">24/7</h3>
-              <p className="text-gray-400 text-xs sm:text-base">Warri Hub Operations</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">24/7</h3>
+              <p className="text-gray-400 text-sm sm:text-base font-medium">Warri Hub Operations</p>
             </div>
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
-                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-red-500" />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-red-600/20 rounded-full mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 border border-red-500/30">
+                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-red-400" />
               </div>
-              <h3 className="text-lg sm:text-2xl font-bold text-white">25+</h3>
-              <p className="text-gray-400 text-xs sm:text-base">LGAs Covered Statewide</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">25+</h3>
+              <p className="text-gray-400 text-sm sm:text-base font-medium">LGAs Covered Statewide</p>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+        <span className="text-xs text-gray-500 font-medium tracking-wider uppercase">Explore Services</span>
+        <ChevronDown className="h-6 w-6 text-gray-400 animate-bounce" />
       </div>
     </section>
   );
