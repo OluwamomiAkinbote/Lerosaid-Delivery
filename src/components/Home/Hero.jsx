@@ -34,9 +34,14 @@ export default function HeroSection() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-6">
-            <button className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-red-500/25">
+            <a
+              href="/assets/lerosaid-price-list.pdf"
+              download
+              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-red-500/25 text-center"
+            >
               Download Location-Price Guide
-            </button>
+            </a>
+
             <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-gray-100 hover:text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 flex items-center justify-center">
               <MapPin className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               View Service Areas
