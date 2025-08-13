@@ -1,46 +1,71 @@
-import { ChevronDown, ShieldCheck, MapPin, Clock, Star } from 'lucide-react';
+"use client";
+
+import { useState } from "react";
+import { ChevronDown, ShieldCheck, MapPin, Clock, Star, Download } from "lucide-react";
 
 export default function HeroSection() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = () => {
+    setIsDownloading(true);
+
+    // Create a link and trigger download
+    const link = document.createElement("a");
+    link.href = "/assets/lerosaid-price-list.pdf"; // file path in public/assets
+    link.download = "lerosaid-price-list.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Reset download state after a short delay
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 1500);
+  };
+
   return (
     <section className="relative h-[90vh] sm:h-screen min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black mt-0">
-      
       {/* Subtle Background Overlay */}
       <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-5 bg-cover bg-center" />
 
       {/* Content Container */}
-      <div className=" pt-56 relative z-20 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto">
+      <div className="pt-56 relative z-20 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto">
         <div className="w-full text-center space-y-4 sm:space-y-6 md:space-y-8">
-          
           {/* Company Badge */}
-          <div className="  inline-flex items-center gap-2 px-4 pt-2 mt-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="inline-flex items-center gap-2 px-4 pt-2 mt-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <Star className="h-4 w-4 text-yellow-400 fill-current" />
             <span className="text-sm font-medium text-gray-100">Trusted Across Delta State</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight tracking-tight">
-            Premium <span className="font-bold text-transparent bg-gradient-to-r from-red-500 to-red-700 bg-clip-text">Logistics</span>
+            Premium{" "}
+            <span className="font-bold text-transparent bg-gradient-to-r from-red-500 to-red-700 bg-clip-text">
+              Logistics
+            </span>
             <br />
             <span className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-gray-300">
               Services in Warri & Delta State
             </span>
           </h1>
-          
+
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light leading-relaxed max-w-3xl mx-auto">
-            Professional freight forwarding, warehousing, and distribution services across Warri, 
-            Asaba, Sapele, and all Delta State communities — connecting businesses with reliable logistics infrastructure.
+            Professional freight forwarding, warehousing, and distribution services across Warri,
+            Asaba, Sapele, and all Delta State communities — connecting businesses with reliable
+            logistics infrastructure.
           </p>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-6">
-            <a
-              href="/assets/lerosaid-price-list.pdf"
-              download
-              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-red-500/25 text-center"
+            <button
+              onClick={handleDownload}
+              disabled={isDownloading}
+              className="flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-red-500/25 disabled:opacity-70"
             >
-              Download Location-Price Guide
-            </a>
+              <Download className="h-4 w-4 sm:h-5 sm:w-5" />
+              {isDownloading ? "Downloading..." : "Download Location-Price Guide"}
+            </button>
 
             <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-gray-100 hover:text-white font-semibold py-3 px-6 rounded-full text-sm sm:text-base transition-all duration-300 flex items-center justify-center">
               <MapPin className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -74,8 +99,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }
