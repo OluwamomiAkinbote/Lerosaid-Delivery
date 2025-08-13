@@ -8,11 +8,11 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] opacity-5 bg-cover bg-center" />
 
       {/* Content Container */}
-      <div className="relative z-20 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto">
+      <div className=" pt-56 relative z-20 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl mx-auto">
         <div className="w-full text-center space-y-4 sm:space-y-6 md:space-y-8">
           
           {/* Company Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="  inline-flex items-center gap-2 px-4 pt-2 mt-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <Star className="h-4 w-4 text-yellow-400 fill-current" />
             <span className="text-sm font-medium text-gray-100">Trusted Across Delta State</span>
           </div>
