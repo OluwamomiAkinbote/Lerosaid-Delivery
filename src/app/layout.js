@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="bg-gradient-to-b from-black to-gray-700 font-poppins"
+      <body className="bg-gradient-to-b from-black to-gray-900 font-poppins"
 >
         <Header />
         <main className="flex-grow">
