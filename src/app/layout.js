@@ -4,17 +4,28 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: {
-    default: 'Lerosaid Logistics | Reliable Delivery in Warri, Delta State',
-    template: '%s | Lerosaid Logistics'
+    default: 'Lerosaid Logistics | Top-Rated Courier & Delivery Services in Warri, Delta',
+    template: '%s | Lerosaid Logistics - Your Trusted Delivery Partner'
   },
-  description: 'Lerosaid Logistics offers fast, reliable, and affordable delivery services in Warri and Delta State. Your packages, our priority.',
-  keywords: ['logistics in Warri', 'Delta State delivery service', 'courier in Warri', 'package delivery', 'Lerosaid Logistics'],
+  description: 'Lerosaid Logistics provides professional, same-day delivery services in Warri and across Delta State. Fast, secure, and affordable package delivery for businesses and individuals.',
+  keywords: [
+    'logistics company Warri',
+    'Delta State courier services',
+    'same-day delivery Warri',
+    'reliable package delivery',
+    'Lerosaid Logistics Nigeria',
+    'express parcel service',
+    'local delivery company',
+    'business logistics solutions',
+    'e-commerce delivery partner',
+    'secure package handling'
+  ],
   authors: [{ name: 'Lerosaid Logistics', url: 'https://www.lerosaid.com' }],
   metadataBase: new URL('https://www.lerosaid.com'),
 
   openGraph: {
-    title: 'Lerosaid Logistics | Reliable Delivery in Warri, Delta State',
-    description: 'Fast and reliable logistics services in Warri and Delta State. Your packages, our priority.',
+    title: 'Lerosaid Logistics | Premium Delivery Services in Warri & Delta State',
+    description: 'Trusted courier and logistics services with real-time tracking. Serving businesses and individuals across Warri and Delta State with fast, reliable delivery.',
     url: 'https://www.lerosaid.com/',
     siteName: 'Lerosaid Logistics',
     images: [
@@ -22,7 +33,7 @@ export const metadata = {
         url: 'https://boltzmann.s3.us-east-1.amazonaws.com/Abstract/lerosaid-favicon.png',
         width: 1200,
         height: 630,
-        alt: 'Lerosaid Logistics',
+        alt: 'Lerosaid Logistics - Professional Delivery Services',
       },
     ],
     locale: 'en_US',
@@ -30,9 +41,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lerosaid Logistics',
+    title: 'Lerosaid Logistics - Your Reliable Delivery Partner',
     site: '@lerosaid', 
-    description: 'Fast and reliable logistics services in Warri and Delta State.',
+    description: 'Fast, secure, and affordable delivery services in Warri and Delta State. Business logistics solutions with real-time tracking.',
     images: ['https://boltzmann.s3.us-east-1.amazonaws.com/Abstract/lerosaid-favicon.png'],
   },
   icons: {
