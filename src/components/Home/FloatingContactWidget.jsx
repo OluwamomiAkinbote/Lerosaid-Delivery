@@ -24,28 +24,28 @@ const FloatingContactWidget = () => {
       name: 'WhatsApp',
       icon: <MessageCircle className="w-6 h-6" />,
       color: 'bg-green-500 hover:bg-green-600',
-      action: () => window.open('https://wa.me/1234567890', '_blank'),
+      action: () => window.open('https://wa.me/+2347055528483', '_blank'),
       description: 'Chat with us on WhatsApp'
     },
     {
       name: 'WhatsApp Business',
       icon: <MessageCircle className="w-6 h-6" />,
       color: 'bg-green-700 hover:bg-green-800',
-      action: () => window.open('https://wa.me/0987654321', '_blank'),
+      action: () => window.open('https://wa.me/+2348051230133', '_blank'),
       description: 'Business inquiries'
     },
     {
       name: 'Email',
       icon: <Mail className="w-6 h-6" />,
       color: 'bg-blue-500 hover:bg-blue-600',
-      action: () => window.open('mailto:contact@example.com', '_blank'),
+      action: () => window.open('mailto:maxholexdon@gmail.com', '_blank'),
       description: 'Send us an email'
     },
     {
       name: 'Call Us',
       icon: <Phone className="w-6 h-6" />,
       color: 'bg-purple-500 hover:bg-purple-600',
-      action: () => window.open('tel:+1234567890', '_blank'),
+      action: () => window.open('tel:+2347055528483', '_blank'),
       description: 'Give us a call'
     }
   ];
@@ -53,7 +53,7 @@ const FloatingContactWidget = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-32 right-6 z-50">
       {/* Expanded Contact Panel */}
       {isOpen && (
         <div className="absolute bottom-16 right-0 w-80 bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-sm rounded-2xl shadow-2xl border border-red-200 overflow-hidden transform transition-all duration-300 ease-out animate-in slide-in-from-right max-w-[90vw]">
