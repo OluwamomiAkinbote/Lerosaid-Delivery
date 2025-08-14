@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer';
+import FloatingContactWidget from '@/components/Home/FloatingContactWidget';
 
 export const metadata = {
   title: {
@@ -87,6 +88,7 @@ export default function RootLayout({ children }) {
       <body className="font-poppins min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
+          <FloatingContactWidget />
           {children}
         </main>
         <Footer />
